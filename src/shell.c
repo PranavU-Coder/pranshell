@@ -40,7 +40,7 @@ int pran_cd(char **args){
     fprintf(stderr,"pran: expected argument to \"cd\" \n");
   } else {
     if (chdir(args[1])!=0){
-      perror("lsh");
+      perror("pran");
     }
   }
   return 1;
