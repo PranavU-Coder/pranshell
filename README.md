@@ -10,3 +10,16 @@ current limitations :
 > Few standard builtins.
 
 > No globbing
+
+to install it on your system (works on arch based distros at the moment) :
+
+```bash
+yay -S pranshell
+```
+
+or 
+
+```bash
+paru -S pranshell
+```
+
