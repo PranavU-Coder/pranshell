@@ -48,7 +48,7 @@ int pran_cd(char **args){
 
 int pran_help(char **args){
   int i;
-  printf("Pranav Unni's Shell.");
+  printf("Pranav Unni's Shell.\n");
   printf("Type program names and arguments, and then hit enter.\n");
   printf("The following are built in:\n");
 
@@ -56,7 +56,7 @@ int pran_help(char **args){
     printf("  %s\n", builtin_str[i]);
   }
 
-  printf("use 'man' command to know more about how to use a certain program -> man grep to know more about how grep works"); 
+  printf("use 'man' command to know more about how to use a certain program -> man grep to know more about how grep works\n"); 
   return 1;
 }
 
@@ -156,7 +156,7 @@ char **pran_split_line(char *line){
 
 int pran_launch(char **args){
 
-    pid_t pid , wpid;
+    pid_t pid;
     int status;
 
     pid = fork();
@@ -180,8 +180,8 @@ int pran_launch(char **args){
     } else {
 
         do {
-            wpid = waitpid(pid, &status , WUNTRACED);
-        } while(!WIFEXITED(status) && !WIFESIGNALED(status));
+            waitpid(pid, &status , WUNTRACED);
+        } while(!WIFEXITED(status) && !WIFSIGNALED(status));
     }
 
     return 1;
