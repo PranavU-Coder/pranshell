@@ -1,0 +1,59 @@
+name: Bug Report
+description: File a bug report to help us improve the project
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the issue.
+      placeholder: |
+        Describe the issue you encountered and what you expected to happen.
+        Example: "When I tried a feature of the shell , it didn't execute"
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Provide step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Open the shell
+        2. the exact command that gave error
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+      placeholder: "Example: I expected a success message and execution to be done."
+      render: shell
+
+  - type: input
+    attributes:
+      label: Affected area
+      description: Mention where the issue occurs.
+      placeholder: "multi-line args"
+
+  - type: input
+    attributes:
+      label: Environment
+      description: System info
+      placeholder: "e.g. macOS14 , cachyos"
+
+  - type: textarea
+    attributes:
+      label: Screenshots / logs
+      description: Paste any error logs or add screenshots if applicable.
+      placeholder: "No visible error logs"
+      render: shell
+
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Any other details or edge cases that might be related.
+      placeholder: "This only happens after clearing cache..."
+      render: shell
